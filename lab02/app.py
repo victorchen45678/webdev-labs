@@ -68,6 +68,7 @@ def exercise3():
 @app.route('/restaurant/')
 @app.route('/restaurant')
 def exercise4():
+    #comments for test
     args = request.args
     location = args.get('location')
     search_term = args.get('term')
