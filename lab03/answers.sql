@@ -12,7 +12,7 @@ FROM users;
 -- Exercise 3
 SELECT id, first_name, last_name 
 FROM users
-ORDER BY last-name;
+ORDER BY last_name;
 
 
 
@@ -36,16 +36,16 @@ select count(*) from posts;
 
 
 -- Exercise 7
-SELECT usere_id, count(*)
+SELECT user_id, count(*)
 FROM comments
 GROUP BY user_id
-ORDER BY count（*） desc;
+ORDER BY count(*) desc;
 
 
 
 -- Exercise 8
 SELECT posts.id, posts.image_url, posts.user_id,
-    users.usernmae, users.first_name, users.last_name
+    users.username, users.first_name, users.last_name
 FROM posts
 INNER JOIN users ON
     posts.user_id=users.id
@@ -63,7 +63,7 @@ WHERE f.user_id = 26;
 
 
 -- Exercise 10
-SELECT p.id, p.pub_data, f.following_id, u.usernmae
+SELECT p.id, p.pub_date, f.following_id, u.username
 FROM following f
 INNER JOIN posts p ON
     f.following_id = p.user_id
@@ -95,10 +95,3 @@ UPDATE users SET email= 'knick2022@gmail.com' where id = 26;
 
 
 -- Exercise 14
-SELECT p.id, p.user_id, count(c.id), concat(substring(p.caption, 0, 50))
-FROM posts p
-INNER JOIN comments c ON
-    p.id=c.post_id
-WHERE p.user_id = 26
-GROUP BY p.id, p.user_id, p.caption
-ORDER BY count(c.id) desc;
