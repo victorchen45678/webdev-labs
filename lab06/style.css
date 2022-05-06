@@ -121,11 +121,13 @@ button {
     font-size: 150%; /* assuming 16px base size, convert to 18pt */
 }
 
-.dyslexia-mode main {
+.dyslexia-mode .content {
    line-height: 2.0;
+   width: 60%;
+   margin: auto;
 }
 
-.dyslexia-mode main p {
+.dyslexia-mode .content p {
    margin-top: 3.5em;
 }
 
@@ -145,8 +147,8 @@ button {
 }
 #dyslexia-toggle {
   padding: 1em;
-  font-size: 18pt;
-  letter-spacing: 0.35ch;
+  font-size: 15pt;
+  letter-spacing: 0.20ch;
   float:right;
 }
 
